@@ -1,4 +1,5 @@
 mysqlcapi
 =========
 
-a little bycicle c api for mysql )
+Небольшой велик для работы с MySQL из-под С)
+Пару трюков подглядел у Поля Дюбуа)
