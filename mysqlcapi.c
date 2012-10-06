@@ -1,9 +1,4 @@
-/*
- * common.c
- *
- *  Created on: 23.05.2012
- *      Author: konstantin
- */
+/*Created on: 23.05.2012*/
 
 #include <stdio.h>
 #include <mysql/mysql.h>
@@ -125,8 +120,8 @@ MYSQL *do_connect(char *host_name,
 		   char *socket_name,
 		   unsigned int flags)
 {
- MYSQL *conn; /*указатель на дескриптор соединения*/
- conn = mysql_init(NULL); /*размещение и инициализация дескриптора соединения*/
+ MYSQL *conn;
+ conn = mysql_init(NULL);
 
  if(conn==NULL)
  {
@@ -147,7 +142,7 @@ MYSQL *do_connect(char *host_name,
   print_error(conn,"Сбой mysql_real_connect()");
   return (NULL);
  }
-#else /*до версии 3.22*/
+#else /*3.22*/
  if(mysql_real_connect(conn,
 		       host_name,
 		       user_name,
@@ -160,7 +155,7 @@ MYSQL *do_connect(char *host_name,
   return (NULL);
  }
 
- if(db_name != NULL) /*имитация действия db_name*/
+ if(db_name != NULL)
  {
   if(mysql_select_db(conn,name)!=0)
   {
@@ -171,7 +166,7 @@ MYSQL *do_connect(char *host_name,
  }
 #endif
 
- return conn; /*связь установлена*/
+ return conn;
 }
 
 void do_disconnect(MYSQL *conn)

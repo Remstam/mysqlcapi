@@ -1,9 +1,4 @@
-/*
- * common.h
- *
- *  Created on: 23.05.2012
- *      Author: konstantin
- */
+/*Created on: 23.05.2012*/
 
 #ifndef COMMON_H_
 #define COMMON_H_
